@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Language Detection Tool</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <h1>Language Detection Tool</h1>
+    <form action="/predict" method="post">
+        <textarea name="text_input" placeholder="Provide your text input here">{{ request.form.get('text_input', '') }}</textarea><br>
+        <button type="submit">Get Language Name</button>
+    </form>
+    <div id="result">
+        {% if language %}
+            <h2>Detected Language: {{ language }}</h2>
+        {% endif %}
+    </div>
+</body>
+</html>
+
