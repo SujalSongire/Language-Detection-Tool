@@ -3,7 +3,7 @@ import pickle
 import os
 
 # Ensure the template folder is correctly set
-TEMPLATE_DIR = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'templates')
+TEMPLATE_DIR = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'template')
 app = Flask(__name__, template_folder=TEMPLATE_DIR)
 
 # Load the model
